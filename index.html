@@ -39,6 +39,7 @@
 
  	<!-- CSS
    ================================================== -->
+   <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
    <link rel="stylesheet" href="css/base.css">  
    <link rel="stylesheet" href="css/main.css">
    <link rel="stylesheet" href="css/vendor.css">     
@@ -92,10 +93,10 @@
    		<div class="row">
 
    			<div class="col-twelve">
-             <h1>< Z E N I T H /></h1><h5>24<sup>th</sup> March, 2016 | YMCA University</h5>
+             <h1>&lt; Z E N I T H /></h1><h5>24<sup>th</sup> March, 2016 | YMCA University</h5>
              <h5>Project Demonstration Hackathon</h5>
 
-             <a class="button stroke smoothscroll" href="#process" title="">Register</a>
+            <button class="register-button"  data-toggle="modal" data-target="#myModal" data-whatever="Snaptastic">Register</button>
 
           </div>  
 
@@ -493,6 +494,115 @@
       </section> <!-- /cta -->
 
 
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="color:black">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="col-md-12 form-group" id="form" style="background-color:#05bca9;color:white;padding: 5%">
+            <div id="wait1" style="display:none;width:69px;height:89px;border:0px solid black;position:absolute;top:30%;left:50%;padding:2px;"><img src='loaderimage.gif' width="64" height="64" /><br>Fetching User Information...</div>
+            <div id="wait2" style="display:none;width:69px;height:89px;border:0px solid black;position:absolute;top:30%;left:50%;padding:2px;"><img src='loaderimage.gif' width="64" height="64" /><br>Registering...</div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="glyphicon glyphicon-remove" style="background-color: black;color:white"></span></button>
+            <h1><span class="modal-title">Register</span></h1>
+              
+              <div class="form-group">
+              <input name="eventid"  id="eventid" type="hidden" required="true" pattern="^\d{10}$" placeholder="eventid" class="form-control" style="width: 50%">
+              </div>
+              <div class="form-group">
+                        <input type="hidden" class="form-control" placeholder="qr" name="qr" id="qr" />
+              </div>
+              <div class="form-group">
+                <label for="Name">Team Name</label>
+                <input type="text" class="form-control" placeholder="Team Name" name="teamname" id="teamname" style="width: 50%; height:45px;" required="true">
+              </div>
+              <div class="form-group">
+                <label for="Name">Member Name 1</label>
+                <input type="text" class="form-control" placeholder="Member Name 1" name="member1" id="member1" style="width: 50%;  height:45px;" required="true">
+              </div>
+              <div class="form-group">
+                <label for="Phone-number">Member 1 Phone Number</label> 
+                <input type="text" class="form-control" placeholder="Member 1 Phone No." name="memberphone1" id="memberphone1" onkeyup="testphone(this.value);" maxlength="10" style="width:50%; height:45px;">
+              </div>
+               <div class="form-group">
+                <label for="Email">Member 1 Email</label>
+                <input type="text" class="form-control" placeholder="Member 1 Email" name="email1" id="email1" style="width: 50%; height:45px;">
+              </div>
+               <div class="form-group">
+                <label for="Linkedin">Member 1 Linkedin Profile</label>
+                <input type="text" class="form-control" placeholder="Member 1 Linkedin Profile" name="linkedin1" id="linkedin1" style="width: 50%; height:45px;">
+              </div>
+              <div class="form-group">
+                <label for="Linkedin">Member 1 Github Profile</label>
+                <input type="text" class="form-control" placeholder="Member 1 Github Profile" name="github1" id="github1" style="width: 50%; height:45px;">
+              </div>
+               
+             
+
+              <div class="form-group">
+                <label for="Name">Member Name 2</label>
+                <input type="text" class="form-control" placeholder="Member Name 2" name="member2" id="member2" style="width: 50%;  height:45px;">
+              </div>
+              <div class="form-group">
+                <label for="Phone-number">Member 2 Phone Number</label> 
+                <input type="text" class="form-control" placeholder="Member2 Phone No." name="memberphone2" id="memberphone2" onkeyup="testphone(this.value);" maxlength="10" style="width:50%; height:45px;">
+              </div>
+               
+              <div class="form-group">
+                <label for="Email">Member 2 Email</label>
+                <input type="text" class="form-control" placeholder="Member 2 Email" name="email2" id="email2" style="width: 50%; height:45px;">
+              </div>
+              <div class="form-group">
+                <label for="Linkedin">Member 2 Linkedin Profile</label>
+                <input type="text" class="form-control" placeholder="Member 2 Linkedin Profile" name="linkedin2" id="linkedin2" style="width: 50%; height:45px;">
+              </div>
+              <div class="form-group">
+                <label for="Linkedin">Member 2 Github Profile</label>
+                <input type="text" class="form-control" placeholder="Member 2 Github Profile" name="github2" id="github2" style="width: 50%; height:45px;">
+              </div>
+              <div class="form-group">
+                <label for="Name">Member Name 3</label>
+                <input type="text" class="form-control" placeholder="Member Name 3" name="member3" id="member3" style="width: 50%;  height:45px;">
+              </div>
+              <div class="form-group">
+                <label for="Phone-number">Member 3 Phone Number</label> 
+                <input type="text" class="form-control" placeholder="Member 3 Phone No." name="memberphone3" id="memberphone3" onkeyup="testphone(this.value);" maxlength="10" style="width:50%; height:45px;">
+              </div>
+
+               <div class="form-group">
+                <label for="Email">Member 3 Email</label>
+                <input type="text" class="form-control" placeholder="Member 3 Email" name="email2" id="email2" style="width: 50%; height:45px;">
+              </div>
+
+                 <div class="form-group">
+                <label for="Linkedin">Member 3 Linkedin Profile</label>
+                <input type="text" class="form-control" placeholder="Member 3 Linkedin Profile" name="linkedin3" id="linkedin3" style="width: 50%; height:45px;">
+              </div>
+
+              <div class="form-group">
+                <label for="Linkedin">Member 3 Github Profile</label>
+                <input type="text" class="form-control" placeholder="Member 3 Github Profile" name="github3" id="github3" style="width: 50%; height:45px;">
+              </div>
+              <div class="form-group">
+                <label for="summary">Summary Of Idea (Min 100 words)</label>
+                 <textarea name="idea" rows="100" cols="60" style="height:400px;">
+                
+                </textarea>
+              </div>
+              
+             
+              
+              
+              <button class="btn-primary btn-lg" id="submit-btn" style="background-color: #4858b1;
+              border: 0px solid red;transition: all .2s" onclick="create()">
+                Register
+              </button>
+              
+            </div>  
+        </div>
+      </div>
+
+        <button type="button"  style="background-color:#4858b1;color:white;margin-left:400px;" data-dismiss="modal" aria-label="Close">Cancel</button>  
+      </div>  
+
+
 
       <div id="preloader"> 
         <div id="loader"></div>
@@ -504,6 +614,7 @@
    <script src="js/jquery-migrate-1.2.1.min.js"></script>
    <script src="js/plugins.js"></script>
    <script src="js/main.js"></script>
+   <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 

@@ -52,6 +52,143 @@
    ================================================== -->
    <link rel="icon" type="image/png" href="images/logo.png">
 
+   <script type="text/javascript">
+window.onload=function(){
+
+ $('#teamname').val('');
+  $('#member1').val('');
+  $('#member2').val('');
+  $('#member3').val('');
+  $("#memberphone1").val('');
+  $("#memberphone2").val('');
+  $("#memberphone3").val('');
+  $('#email1').val('');
+  $('#email2').val('');
+  $('#email3').val('');
+  $('#idea').val('');
+  $('#github1').val('');
+  $('#github2').val('');
+  $('#github3').val('');
+  $('#linkedin1').val('');
+  $('#linkedin2').val('');
+  $('#linkedin3').val('');
+}
+function testphone(phone)
+{if(isNaN(phone))
+  alert("Enter Phone No"); 
+}
+
+   function create()
+{
+ var college = $("#teamname").val();
+
+  var phoneno1=$("#memberphone1").val();
+  var phoneno2=$("#memberphone2").val();
+  var phoneno3=$("#memberphone3").val();
+
+  var phoneno=phoneno1+','+phoneno2+','+phoneno3;
+
+  var email1= $("#email1").val();
+  var email2= $("#email2").val();
+  var email3= $("#email3").val();
+
+  var email=email1+','+email2+','+email3;
+
+  var fullname1= $("#member1").val();
+   var fullname2= $("#member2").val();
+    var fullname3= $("#member3").val();
+    
+
+  var linkedin1=$("#linkedin1").val();
+  var linkedin2=$("#linkedin2").val();
+  var linkedin3=$("#linkedin3").val();
+
+  var github1=$("#github1").val();
+  var github2=$("#github2").val();
+  var github3=$("#github3").val();
+   var fullname='(1)'+fullname1+':-'+linkedin1+','+github1+' (2)'+fullname1+':-'+linkedin1+','+github1+' (3)'+fullname3+':-'+linkedin3+','+github3;
+  var paymenttxnid=$("#idea").val();
+ 
+  
+  var paymentphoneno='';
+
+
+  var eventid="58a05793c973d40004cd4914";
+
+
+  if(phoneno1!='' && email1!='' && fullname1!='' && college!='' && paymenttxnid!='')
+  { 
+
+    $("#wait2").css("display","block");
+
+    $.ajax({
+
+      type: "POST",
+      crossDomain: true,
+      dataType: 'json',
+      url: "https://elementsculmyca2017.herokuapp.com/api/v1/register/",
+      data: {phoneno:phoneno,email:email,fullname:fullname,college:college,eventid:eventid,paymenttxnid:paymenttxnid,paymentphoneno:paymentphoneno}
+
+           //success: function() { alert("Success"); },
+           //error: function() { alert('Failed!'); }
+
+
+       }).done(function(data){
+
+        var obj=JSON.stringify(data);
+
+        if(obj[12]=='R')
+        {
+          $("#wait2").css("display","none");  
+          $('#myModal').modal('hide');
+          $('#myModal2').modal('toggle'); 
+        }
+        else
+        {
+          $("#wait2").css("display","none");  
+          $('#myModal').modal('hide');
+          $('#myModal1').modal('toggle'); 
+        } 
+        ok();
+
+
+       })
+
+   }
+   else
+   {
+    alert("Fill required fields!!")
+   }
+
+
+}
+
+
+function ok()
+{
+  $('#teamname').val('');
+  $('#member1').val('');
+  $('#member2').val('');
+  $('#member3').val('');
+  $("#memberphone1").val('');
+  $("#memberphone2").val('');
+  $("#memberphone3").val('');
+  $('#email1').val('');
+  $('#email2').val('');
+  $('#email3').val('');
+  $('#idea').val('');
+  $('#github1').val('');
+  $('#github2').val('');
+  $('#github3').val('');
+  $('#linkedin1').val('');
+  $('#linkedin2').val('');
+  $('#linkedin3').val('');
+}
+
+
+
+</script>
+
 </head>
 
 <body id="top">
@@ -73,7 +210,7 @@
            <li><a class="smoothscroll"  href="#features" title="">Schedule</a></li>
            <li><a class="smoothscroll"  href="#pricing" title="">Sponsors</a></li>
            <li><a class="smoothscroll"  href="#faq" title="">FAQ</a></li>					
-           <li class="highlight with-sep"><a href="#" title="">Contact Us</a></li>					
+           <li class="highlight with-sep"><a href="#reg" title="">Register</a></li>					
         </ul>
      </nav>
 
@@ -441,7 +578,8 @@
    		
    	</div> <!-- /faq-content --> 
 
-   	<div class="row section-ads">
+
+   	<div class="row section-ads" id="reg">
 
         <div class="col-twelve">	
 
@@ -451,7 +589,7 @@
 
 
             <div class="action">
-               <a class="button large round" href="">Register Now</a>
+               <button class="register-button"  data-toggle="modal" data-target="#myModal" data-whatever="Snaptastic">Register</button>
             </div>
 
          </div>			      
@@ -460,8 +598,8 @@
 
    </div> <!-- /section-ads --> 
 
-
-</section> <!-- /faq --> 
+</section>
+  
 
    <!-- cta
    ================================================== -->
@@ -493,12 +631,25 @@
 
       </section> <!-- /cta -->
 
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="color:black">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="col-md-12 form-group" id="form" style="background-color:#05bca9;color:white;padding: 5%">
+        <h1><span class="modal-title">Your Registration is successful!!</span></h1>
+
+        <button type="button"  style="background-color:#4858b1;color:white;margin-left:500px;" data-dismiss="modal" aria-label="Close">Ok</button>  
+      </div>  
+
+
+    </div>
+  </div>
+</div>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="color:black">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="col-md-12 form-group" id="form" style="background-color:#05bca9;color:white;padding: 5%">
-            <div id="wait1" style="display:none;width:69px;height:89px;border:0px solid black;position:absolute;top:30%;left:50%;padding:2px;"><img src='loaderimage.gif' width="64" height="64" /><br>Fetching User Information...</div>
+            
             <div id="wait2" style="display:none;width:69px;height:89px;border:0px solid black;position:absolute;top:30%;left:50%;padding:2px;"><img src='loaderimage.gif' width="64" height="64" /><br>Registering...</div>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="glyphicon glyphicon-remove" style="background-color: black;color:white"></span></button>
             <h1><span class="modal-title">Register</span></h1>
@@ -507,82 +658,79 @@
               <input name="eventid"  id="eventid" type="hidden" required="true" pattern="^\d{10}$" placeholder="eventid" class="form-control" style="width: 50%">
               </div>
               <div class="form-group">
-                        <input type="hidden" class="form-control" placeholder="qr" name="qr" id="qr" />
+                <label for="Name">Team Name *</label>
+                <input type="text" class="form-control" placeholder="Team Name" name="teamname" id="teamname" style="width: 50%; height:48px;" required="true">
               </div>
               <div class="form-group">
-                <label for="Name">Team Name</label>
-                <input type="text" class="form-control" placeholder="Team Name" name="teamname" id="teamname" style="width: 50%; height:45px;" required="true">
+                <label for="Name">Member Name 1 *</label>
+                <input type="text" class="form-control" placeholder="Member Name 1" name="member1" id="member1" style="width: 50%;  height:48px;" required="true">
               </div>
               <div class="form-group">
-                <label for="Name">Member Name 1</label>
-                <input type="text" class="form-control" placeholder="Member Name 1" name="member1" id="member1" style="width: 50%;  height:45px;" required="true">
-              </div>
-              <div class="form-group">
-                <label for="Phone-number">Member 1 Phone Number</label> 
-                <input type="text" class="form-control" placeholder="Member 1 Phone No." name="memberphone1" id="memberphone1" onkeyup="testphone(this.value);" maxlength="10" style="width:50%; height:45px;">
+                <label for="Phone-number">Member 1 Phone Number *</label> 
+                <input type="text" class="form-control" placeholder="Member 1 Phone No." name="memberphone1" id="memberphone1" onkeyup="testphone(this.value);" maxlength="10" style="width:50%; height:48px;"required="true">
               </div>
                <div class="form-group">
-                <label for="Email">Member 1 Email</label>
-                <input type="text" class="form-control" placeholder="Member 1 Email" name="email1" id="email1" style="width: 50%; height:45px;">
+                <label for="Email">Member 1 Email *</label>
+                <input type="text" class="form-control" placeholder="Member 1 Email" name="email1" id="email1" style="width: 50%; height:48px;" required="true">
               </div>
                <div class="form-group">
                 <label for="Linkedin">Member 1 Linkedin Profile</label>
-                <input type="text" class="form-control" placeholder="Member 1 Linkedin Profile" name="linkedin1" id="linkedin1" style="width: 50%; height:45px;">
+                <input type="text" class="form-control" placeholder="Member 1 Linkedin Profile" name="linkedin1" id="linkedin1" style="width: 50%; height:48px;">
               </div>
               <div class="form-group">
                 <label for="Linkedin">Member 1 Github Profile</label>
-                <input type="text" class="form-control" placeholder="Member 1 Github Profile" name="github1" id="github1" style="width: 50%; height:45px;">
+                <input type="text" class="form-control" placeholder="Member 1 Github Profile" name="github1" id="github1" style="width: 50%; height:48px;">
               </div>
                
              
 
               <div class="form-group">
                 <label for="Name">Member Name 2</label>
-                <input type="text" class="form-control" placeholder="Member Name 2" name="member2" id="member2" style="width: 50%;  height:45px;">
+                <input type="text" class="form-control" placeholder="Member Name 2" name="member2" id="member2" style="width: 50%;  height:48px;">
               </div>
               <div class="form-group">
                 <label for="Phone-number">Member 2 Phone Number</label> 
-                <input type="text" class="form-control" placeholder="Member2 Phone No." name="memberphone2" id="memberphone2" onkeyup="testphone(this.value);" maxlength="10" style="width:50%; height:45px;">
+                <input type="text" class="form-control" placeholder="Member2 Phone No." name="memberphone2" id="memberphone2" onkeyup="testphone(this.value);" maxlength="10" style="width:50%; height:48px;">
               </div>
                
               <div class="form-group">
                 <label for="Email">Member 2 Email</label>
-                <input type="text" class="form-control" placeholder="Member 2 Email" name="email2" id="email2" style="width: 50%; height:45px;">
+                <input type="text" class="form-control" placeholder="Member 2 Email" name="email2" id="email2" style="width: 50%; height:48px;">
               </div>
               <div class="form-group">
                 <label for="Linkedin">Member 2 Linkedin Profile</label>
-                <input type="text" class="form-control" placeholder="Member 2 Linkedin Profile" name="linkedin2" id="linkedin2" style="width: 50%; height:45px;">
+                <input type="text" class="form-control" placeholder="Member 2 Linkedin Profile" name="linkedin2" id="linkedin2" style="width: 50%; height:48px;">
               </div>
               <div class="form-group">
                 <label for="Linkedin">Member 2 Github Profile</label>
-                <input type="text" class="form-control" placeholder="Member 2 Github Profile" name="github2" id="github2" style="width: 50%; height:45px;">
+                <input type="text" class="form-control" placeholder="Member 2 Github Profile" name="github2" id="github2" style="width: 50%; height:48px;">
               </div>
               <div class="form-group">
                 <label for="Name">Member Name 3</label>
-                <input type="text" class="form-control" placeholder="Member Name 3" name="member3" id="member3" style="width: 50%;  height:45px;">
+                <input type="text" class="form-control" placeholder="Member Name 3" name="member3" id="member3" style="width: 50%;  height:48px;">
               </div>
               <div class="form-group">
                 <label for="Phone-number">Member 3 Phone Number</label> 
-                <input type="text" class="form-control" placeholder="Member 3 Phone No." name="memberphone3" id="memberphone3" onkeyup="testphone(this.value);" maxlength="10" style="width:50%; height:45px;">
+                <input type="text" class="form-control" placeholder="Member 3 Phone No." name="memberphone3" id="memberphone3" onkeyup="testphone(this.value);" maxlength="10" style="width:50%; height:48px;">
               </div>
 
                <div class="form-group">
                 <label for="Email">Member 3 Email</label>
-                <input type="text" class="form-control" placeholder="Member 3 Email" name="email2" id="email2" style="width: 50%; height:45px;">
+                <input type="text" class="form-control" placeholder="Member 3 Email" name="email3" id="email3" style="width: 50%; height:48px;">
               </div>
 
                  <div class="form-group">
                 <label for="Linkedin">Member 3 Linkedin Profile</label>
-                <input type="text" class="form-control" placeholder="Member 3 Linkedin Profile" name="linkedin3" id="linkedin3" style="width: 50%; height:45px;">
+                <input type="text" class="form-control" placeholder="Member 3 Linkedin Profile" name="linkedin3" id="linkedin3" style="width: 50%; height:48px;">
               </div>
 
               <div class="form-group">
                 <label for="Linkedin">Member 3 Github Profile</label>
-                <input type="text" class="form-control" placeholder="Member 3 Github Profile" name="github3" id="github3" style="width: 50%; height:45px;">
+                <input type="text" class="form-control" placeholder="Member 3 Github Profile" name="github3" id="github3" style="width: 50%; height:48px;">
               </div>
               <div class="form-group">
-                <label for="summary">Summary Of Idea (Min 100 words)</label>
-                 <textarea name="idea" rows="100" cols="60" style="height:400px;">
+                <label for="summary">Summary Of Idea (Min 100 words) *</label>
+                 <textarea name="idea" rows="100" cols="60" style="height:400px;" id="idea">
                 
                 </textarea>
               </div>
@@ -599,7 +747,7 @@
         </div>
       </div>
 
-        <button type="button"  style="background-color:#4858b1;color:white;margin-left:400px;" data-dismiss="modal" aria-label="Close">Cancel</button>  
+        <button type="button"  style="background-color:#4858b1;color:white;margin-left:400px;" data-dismiss="modal" aria-label="Close" onclick="ok()">Cancel</button>  
       </div>  
 
 

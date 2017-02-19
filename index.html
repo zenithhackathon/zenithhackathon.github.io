@@ -141,13 +141,13 @@
           {
             $("#wait2").css("display","none");  
             $('#myModal').modal('hide');
-            $('#myModal2').modal('toggle'); 
+            $('#myModal1').modal('toggle'); 
           }
           else
           {
             $("#wait2").css("display","none");  
             $('#myModal').modal('hide');
-            $('#myModal1').modal('toggle'); 
+            $('#myModal2').modal('toggle'); 
           } 
           ok();
 
@@ -630,6 +630,20 @@
        </div> <!-- /cta-content -->
 
      </section> <!-- /cta -->
+      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="color:black">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="col-md-12 form-group" id="form" style="background-color:#05bca9;color:white;padding: 5%">
+            <h1><span class="modal-title">Your Registration is NOT successful!! TRY AGAIN!!</span></h1>
+
+            <button type="button"  style="background-color:#4858b1;color:white;margin-left:500px;" data-dismiss="modal" aria-label="Close">Ok</button>  
+          </div>  
+
+
+        </div>
+      </div>
+    </div>
+
 
      <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="color:black">
       <div class="modal-dialog" role="document">

@@ -7,23 +7,23 @@
    <!--- basic page needs
    ================================================== -->
    <meta charset="utf-8">
-   <title>Zenith Hackathon | Elements Culmyca 2017</title>
+   <title>Zenith Hackathon | Elements Culmyca 2018</title>
 
    <!-- for Google -->
-   <meta name="description" content="Project demonstration and pitching hackathon, At YMCA University During Elements Culmyca 2017" />
-   <meta name="keywords" content="zenith,hackathon,manan,college,fest,elements,culmyca,ymca,2017" />
-   <meta name="author" content="Manan.Tech" />
-   <meta name="copyright" content="vipinkhushu@hotmail.com" />
+   <meta name="description" content="Project demonstration and pitching hackathon, At YMCA University During Elements Culmyca 2018" />
+   <meta name="keywords" content="zenith,hackathon,manan,college,fest,elements,culmyca,ymca,2018" />
+   <meta name="author" content="manantechnosurge" />
+   <meta name="copyright" content="manantechnosurge@gmail.com" />
    <meta name="application-name" content="Zenith" />
    <!-- for Facebook -->
    <meta property="og:url"                content="http://zenith.elementsculmyca.com/" />
-   <meta property="og:title"              content="Zenith Hackathon | 25 March 2017" />
+   <meta property="og:title"              content="Zenith Hackathon | 24 March 2018" />
    <meta property="og:description"        content="Project demonstration and pitching hackathon, at YMCA University, Faridabad. Win cash prize upto Rs 15,000 and goodies worth Rs 90,000." />
    <meta property="og:image"              content="http://zenith.elementsculmyca.com/images/coverphoto.jpg" />
    <meta property="og:site_name"          content="Zenith Hackathon" />
    <!-- for Twitter -->
    <meta name="twitter:card" content="summary" />
-   <meta name="twitter:title" content="Zenith | Elements Culmyca 2017" />
+   <meta name="twitter:title" content="Zenith | Elements Culmyca 2018" />
    <meta name="twitter:description" content="Project demonstration hackathon at Annual Cultural Cum Technical Fest Of YMCA University Of Science And Technology, Faridabad" />
    <meta name="twitter:image" content="http://zenith.elementsculmyca.com/images/coverphoto.jpg" />
    <link rel="apple-touch-icon" href="images/logo.png">
@@ -38,9 +38,9 @@
  	<!-- CSS
    ================================================== -->
    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/base.css">
    <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/vendor.css">     
+   <link rel="stylesheet" href="css/vendor.css">
 
    <!-- script
    ================================================== -->
@@ -73,7 +73,7 @@
    }
    function testphone(phone)
    {if(isNaN(phone))
-    alert("Enter Phone No"); 
+    alert("Enter Phone No");
   }
 
   function create()
@@ -115,7 +115,7 @@
 
 
    if(phoneno1!='' && email1!='' && fullname1!='' && college!='' && paymenttxnid!='')
-   { 
+   {
 
     $("#wait2").css("display","block");
 
@@ -124,7 +124,7 @@
       type: "POST",
       crossDomain: true,
       dataType: 'json',
-      url: "https://elementsculmyca2017.herokuapp.com/api/v1/register/",
+      url: "https://elementsculmyca2018.herokuapp.com/api/v1/register/",
       data: {phoneno:phoneno,email:email,fullname:fullname,college:college,eventid:eventid,paymenttxnid:paymenttxnid,paymentphoneno:paymentphoneno}
 
            //success: function() { alert("Success"); },
@@ -137,16 +137,16 @@
 
           if(obj[12]=='R')
           {
-            $("#wait2").css("display","none");  
+            $("#wait2").css("display","none");
             $('#myModal').modal('hide');
-            $('#myModal1').modal('toggle'); 
+            $('#myModal1').modal('toggle');
           }
           else
           {
-            $("#wait2").css("display","none");  
+            $("#wait2").css("display","none");
             $('#myModal').modal('hide');
-            $('#myModal2').modal('toggle'); 
-          } 
+            $('#myModal2').modal('toggle');
+          }
           ok();
 
 
@@ -191,7 +191,7 @@
 
 <body id="top">
 
-	<!-- header 
+	<!-- header
  ================================================== -->
  <header>
 
@@ -206,15 +206,17 @@
      <li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
      <li><a class="smoothscroll"  href="#process" title="">About</a></li>
      <li><a class="smoothscroll"  href="#features" title="">Schedule</a></li>
+     <li><a class="smoothscroll"  href="#highlights" title="">Highlights</a></li>
      <li><a class="smoothscroll"  href="#pricing" title="">Sponsors</a></li>
-     <li><a class="smoothscroll"  href="#faq" title="">FAQ</a></li>					
-     <!--<li class="highlight with-sep"><a href="#reg" title="">Register</a></li>	-->				
+     <li><a class="smoothscroll"  href="#faq" title="">FAQ</a></li>
+
+     <!--<li class="highlight with-sep"><a href="#reg" title="">Register</a></li>	-->
    </ul>
  </nav>
 
  <a class="menu-toggle" href="#"><span>Menu</span></a>
 
-</div>   	
+</div>
 
 </header> <!-- /header -->
 
@@ -228,24 +230,26 @@
    <div class="row">
 
     <div class="col-twelve">
-      <h1><img src="images/logo_cover.png"></h1><h5>25<sup>th</sup> March, 2017 | YMCA University, Faridabad</h5>
+      <h1><img src="images/logo_cover.png"></h1><h5>24<sup>th</sup> March, 2018 | YMCA University, Faridabad</h5>
       <h5>Project Demonstration Hackathon<br/> Win cash prize upto Rs 15,000 and goodies worth Rs 90,000.</h5>
-      <h5 style="color:green;background-color: #fff;">List of shortlisted teams is out now, to view <a href="https://www.facebook.com/zenithhackathon/photos/a.615972045203361.1073741828.614173918716507/1017087171758511/?type=3&permPage=1" target="_new
-    ">click here</a></h5>
+      <h5 style="color:green;background-color: #fff;"><a href="https://www.facebook.com/zenithhackathon/photos/a.615972045203361.1073741828.614173918716507/1017087171758511/?type=3&permPage=1" target="_new">
+      List of shortlisted teams for 2017</a></h5>
+      <!--<h5 style="color:green;background-color: #fff;">Name of winners have been announced, <a href="https://zenith.hackerearth.com/" target="_new
+    ">click here</a></h5>-->
       <!--<a href="https://zenith.hackerearth.com/">
       <button class="register-button">Register Now</button>
       </a>-->
-    </div>  
+    </div>
 
-  </div>   		 		
-</div> 
+  </div>
+</div>
 
 </section> <!-- /intro -->
 
 
    <!-- Process Section
    ================================================== -->
-   <section id="process">  
+   <section id="process">
 
    	<div class="row section-intro">
    		<div class="col-twelve with-bottom-line">
@@ -255,10 +259,10 @@
 
    			<p class="lead">
           Are you  a coder, technocrat, entrepreneur or a creativity digger looking for a challenge? This is an event for coders who have the hacking spirits and love giving life to their ideas.<br/>
-          The goal? You can hack anything that provides a solution to any impactful problem. Channel your focus, build a mobile application or web application or an IOT or any other stuff and show us your project. Anything that can limit you is your own creativity. Make your disruptive ideas happen.     
+          The goal? You can hack anything that provides a solution to any impactful problem. Channel your focus, build a mobile application or web application or an IOT or any other stuff and show us your project. Anything that can limit you is your own creativity. Make your disruptive ideas happen.
         </p>
 
-      </div>   		
+      </div>
     </div>
 
     <div class="row process-content">
@@ -270,10 +274,10 @@
         <h5>Register Your Team</h5>
 
         <ol>
-          <li> Click on the "<a href="https://zenith.hackerearth.com/">Register Now</a>" button, register yourself there by filling up a simple form.
+          <li> Registrations will start soon. When started, click on the "Register Now" button, register yourself there by filling up a simple form.
            <li> You need to create a team of maximum 3 people and minimum 1 there.
             <li> Submit a summary of your project idea there.
-            </ol>	
+            </ol>
           </div>
 
           <div class="item" data-item="2">
@@ -304,13 +308,13 @@
 
          </div>
 
-       </div> <!-- /right-side -->  
+       </div> <!-- /right-side -->
 
-       <div class="image-part"></div>  			
+       <div class="image-part"></div>
 
-     </div> <!-- /process-content --> 
+     </div> <!-- /process-content -->
 
-   </section> <!-- /process-->    
+   </section> <!-- /process-->
 
 
    <!-- features Section
@@ -325,33 +329,33 @@
 
        <p class="lead"></p>
 
-     </div>   		
+     </div>
    </div>
 
    <div class="row features-content">
 
      <div class="features-list block-1-3 block-s-1-2 block-tab-full group">
 
-      <div class="bgrid feature">	
+      <div class="bgrid feature">
 
 
-       <div class="service-content">	
+       <div class="service-content">
 
-        <h3 class="h05">25/March/2016 | 9:30 AM</h3>
+        <h3 class="h05">24/March/2018 | 9:30 AM</h3>
 
         <p>Reporting</p>
 
-      </div> 	         	 
+      </div>
 
     </div> <!-- /bgrid -->
 
-    <div class="bgrid feature">	
+    <div class="bgrid feature">
 
 
-      <div class="service-content">	
-       <h3 class="h05">25/March/2016 | 10:00 AM</h3>  
+      <div class="service-content">
+       <h3 class="h05">24/March/2018 | 10:00 AM</h3>
        <p>Source code submission and verification round</p>
-     </div>	                          
+     </div>
 
    </div> <!-- /bgrid -->
 
@@ -359,13 +363,13 @@
 
 
      <div class="service-content">
-      <h3 class="h05">25/March/2016 | 10:30 AM</h3>
+      <h3 class="h05">24/March/2018 | 10:30 AM</h3>
 
       <p>Pitching And Demonstration Round
-      </p> 
+      </p>
 
 
-    </div> 	            	               
+    </div>
 
   </div> <!-- /bgrid -->
 
@@ -373,27 +377,27 @@
 
 
    <div class="service-content">
-    <h3 class="h05">25/March/2016 | 3:00 PM</h3>
+    <h3 class="h05">24/March/2018 | 3:00 PM</h3>
 
     <p>Result Publication
-    </p> 
+    </p>
 
 
-  </div>                
+  </div>
 
 </div> <!-- /bgrid -->
 
 <div class="bgrid feature">
 
 
-  <div class="service-content">	
-   <h3 class="h05">25/March/2016 | 3:30 PM</h3>
+  <div class="service-content">
+   <h3 class="h05">24/March/2018 | 3:30 PM</h3>
 
    <p>Felicitation And Award Ceremony
-   </p> 
+   </p>
 
 
- </div>	               
+ </div>
 
 </div> <!-- /bgrid -->
 
@@ -401,12 +405,12 @@
 
 
  <div class="service-content">
-   <h3 class="h05">25/March/2016 | 4:00 PM</h3>
+   <h3 class="h05">24/March/2018 | 4:00 PM</h3>
 
    <p>Event Ends
-   </p> 
+   </p>
 
- </div>	               
+ </div>
 
 </div> <!-- /bgrid -->
 
@@ -416,9 +420,42 @@
 
 </section> <!-- /features -->
 
-
-	<!-- pricing
+	<!-- highlights
  ================================================== -->
+<section id="highlights">
+  <div class="row section-intro">
+   <div class="col-twelve with-bottom-line">
+    <h1>Highlights</h1>
+    <p class="lead">
+      <p>Statistics from previous year's Zenith
+    </p>
+  </div>
+  <div class="myContent" style="margin-top:20px;">
+    <div class="row">
+      <div class="col-sm-3">
+    <p class="highlight-heading">Number of Hackers Hosted</p>
+    <p id="demo"></p>
+  </div>
+  <div class="col-sm-3">
+    <p class="highlight-heading">Number of lines of code</p>
+    <p id="demo1">
+    </div>
+    <div class="col-sm-3">
+    <p class="highlight-heading">Number of github commits</p>
+    <p id ="demo2"></p></div>
+    <div class="col-sm-3">
+    <p class="highlight-heading">Number of git repo</p>
+    <p id="demo3"></p></div>
+</div>
+</div>
+
+
+</div>
+
+</section>
+
+
+
 
  <section id="pricing">
 
@@ -426,11 +463,11 @@
    <div class="col-twelve with-bottom-line">
 
 
-    <h1>Our Sponsors</h1>
+    <h1>Previous Sponsors</h1>
 
-    <p class="lead">Interesting in becoming a sponsor? Drop us a mail manantechnosurge[at]gmail[dot]com</p>
+    <p class="lead">Interesting in becoming a sponsor? <br>Drop us a mail contact[at]manantechnosurge[dot]com</p>
 
-  </div>   		
+  </div>
 </div>
 
 <div class="row pricing-content">
@@ -443,8 +480,8 @@
       <a href="http://jetbrains.com/student" target="_new">
        <img src="images/sponsors/jetbrains.png">
      </a>
-   </div>               
- </div>            	                 
+   </div>
+ </div>
 </div>
 
  <div class="bgrid">
@@ -453,8 +490,8 @@
       <a href="https://www.mozilla.org/en-US/" target="_new">
        <img src="images/sponsors/mozilla.png">
      </a>
-   </div>               
- </div>                              
+   </div>
+ </div>
 </div>
 
 
@@ -464,8 +501,8 @@
     <a href="mailto:chandan@codeshala.org" target="_new">
      <img src="images/sponsors/codeshala.png">
    </a>
- </div>               
-</div>                              
+ </div>
+</div>
 </div>
 
 
@@ -476,8 +513,8 @@
     <a href="https://sapphireengine.com/" target="_new">
      <img src="images/sponsors/sapphire.png">
    </a>
- </div>               
-</div>                              
+ </div>
+</div>
 </div>
 
 <div class="bgrid">
@@ -486,8 +523,8 @@
     <a href="https://www.hackerearth.com/" target="_new">
      <img src="images/sponsors/hackerearth.png">
    </a>
- </div>               
-</div>                              
+ </div>
+</div>
 </div>
 
 
@@ -497,8 +534,8 @@
     <a href="https://www.digitalocean.com/" target="_new">
      <img src="images/sponsors/DO.png">
    </a>
- </div>               
-</div>                              
+ </div>
+</div>
 </div>
 
 
@@ -508,8 +545,8 @@
     <a href="https://stickermule.com/" target="_new">
      <img src="images/sponsors/sticker-mule.png">
    </a>
- </div>               
-</div>                              
+ </div>
+</div>
 </div>
 
 
@@ -519,15 +556,15 @@
     <a href="http://get.tech/" target="_new">
      <img src="images/sponsors/dottech.png">
    </a>
- </div>               
-</div>                              
+ </div>
+</div>
 </div>
 
-</div> <!-- /pricing-tables --> 
+</div> <!-- /pricing-tables -->
 
-</div> <!-- /pricing-content --> 
+</div> <!-- /pricing-content -->
 
-</section> <!-- /pricing --> 
+</section> <!-- /pricing -->
 
 
 
@@ -547,7 +584,7 @@
 
    			<p class="lead">If you dont find your problem listed below, feel free to drop us an email manantechnosurge[at]gmail[dot]com</p>
 
-   		</div>   		
+   		</div>
    	</div>
 
    	<div class="row faq-content">
@@ -617,14 +654,14 @@
          <p>Pretty much everything from cash prizes and gift cards to socializing with fellow hacker community. And yeah prized worth rupees 1,00,000/- </p>
 
        </div>
-     </div> <!-- /q-and-a --> 
+     </div> <!-- /q-and-a -->
 
-   </div> <!-- /faq-content --> 
+   </div> <!-- /faq-content -->
 
 <!--
    <div class="row section-ads" id="reg">
 
-    <div class="col-twelve">	
+    <div class="col-twelve">
 
      <div class="ad-content">
 
@@ -637,11 +674,11 @@
       </a>
      </div>
 
-   </div>			      
+   </div>
 
  </div>
 
-</div> --><!-- /section-ads --> 
+</div> --><!-- /section-ads -->
 
 </section>
 
@@ -681,8 +718,8 @@
           <div class="col-md-12 form-group" id="form" style="background-color:#05bca9;color:white;padding: 5%">
             <h1><span class="modal-title">Your Registration is NOT successful!! TRY AGAIN!!</span></h1>
 
-            <button type="button"  style="background-color:#4858b1;color:white;margin-left:500px;" data-dismiss="modal" aria-label="Close">Ok</button>  
-          </div>  
+            <button type="button"  style="background-color:#4858b1;color:white;margin-left:500px;" data-dismiss="modal" aria-label="Close">Ok</button>
+          </div>
 
 
         </div>
@@ -696,8 +733,8 @@
           <div class="col-md-12 form-group" id="form" style="background-color:#05bca9;color:white;padding: 5%">
             <h1><span class="modal-title">Your Registration is successful!!</span></h1>
 
-            <button type="button"  style="background-color:#4858b1;color:white;margin-left:500px;" data-dismiss="modal" aria-label="Close">Ok</button>  
-          </div>  
+            <button type="button"  style="background-color:#4858b1;color:white;margin-left:500px;" data-dismiss="modal" aria-label="Close">Ok</button>
+          </div>
 
 
         </div>
@@ -725,7 +762,7 @@
               <input type="text" class="form-control" placeholder="Member Name 1" name="member1" id="member1" style="width: 50%;  height:48px;" required="true">
             </div>
             <div class="form-group">
-              <label for="Phone-number">Member 1 Phone Number *</label> 
+              <label for="Phone-number">Member 1 Phone Number *</label>
               <input type="text" class="form-control" placeholder="Member 1 Phone No." name="memberphone1" id="memberphone1" onkeyup="testphone(this.value);" maxlength="10" style="width:50%; height:48px;"required="true">
             </div>
             <div class="form-group">
@@ -748,7 +785,7 @@
               <input type="text" class="form-control" placeholder="Member Name 2" name="member2" id="member2" style="width: 50%;  height:48px;">
             </div>
             <div class="form-group">
-              <label for="Phone-number">Member 2 Phone Number</label> 
+              <label for="Phone-number">Member 2 Phone Number</label>
               <input type="text" class="form-control" placeholder="Member2 Phone No." name="memberphone2" id="memberphone2" onkeyup="testphone(this.value);" maxlength="10" style="width:50%; height:48px;">
             </div>
 
@@ -769,7 +806,7 @@
               <input type="text" class="form-control" placeholder="Member Name 3" name="member3" id="member3" style="width: 50%;  height:48px;">
             </div>
             <div class="form-group">
-              <label for="Phone-number">Member 3 Phone Number</label> 
+              <label for="Phone-number">Member 3 Phone Number</label>
               <input type="text" class="form-control" placeholder="Member 3 Phone No." name="memberphone3" id="memberphone3" onkeyup="testphone(this.value);" maxlength="10" style="width:50%; height:48px;">
             </div>
 
@@ -802,21 +839,21 @@
             Register
           </button>
 
-        </div>  
+        </div>
       </div>
     </div>
 
-    <button type="button"  style="background-color:#4858b1;color:white;margin-left:400px;" data-dismiss="modal" aria-label="Close" onclick="ok()">Cancel</button>  
-  </div>  
+    <button type="button"  style="background-color:#4858b1;color:white;margin-left:400px;" data-dismiss="modal" aria-label="Close" onclick="ok()">Cancel</button>
+  </div>
 
 
 
-  <div id="preloader"> 
+  <div id="preloader">
     <div id="loader"></div>
-  </div> 
+  </div>
 
    <!-- Java Script
-   ================================================== --> 
+   ================================================== -->
    <script src="js/jquery-1.11.3.min.js"></script>
    <script src="js/jquery-migrate-1.2.1.min.js"></script>
    <script src="js/plugins.js"></script>
@@ -824,5 +861,75 @@
    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
  </body>
+<script>
+function increase(){
+var x = 0;
+var elem = document.getElementById("demo");
+var id= setInterval(function my(){
+if(x==87){
+clearInterval(id);
+}
+else{
+x+=1;
+elem.innerHTML=x;
+}
+},100)
 
+}
+increase();
+
+
+function increase1(){
+var x = 0;
+var elem1 = document.getElementById("demo1");
+var id= setInterval(function my(){
+if(x==10000){
+clearInterval(id);
+}
+else{
+x=x+100;
+if(x==10000)
+	elem1.innerHTML=x+"+";
+else
+	elem1.innerHTML=x;
+}
+},100)
+
+}
+increase1();
+
+function increase2(){
+var x = 0;
+var elem2 = document.getElementById("demo2");
+var id= setInterval(function my(){
+if(x==68){
+clearInterval(id);
+}
+else{
+x++;
+elem2.innerHTML=x;
+}
+},100)
+
+}
+increase2();
+
+function increase3(){
+var x = 0;
+var elem3 = document.getElementById("demo3");
+var id= setInterval(function my(){
+if(x==30){
+clearInterval(id);
+}
+else{
+x+=5;
+elem3.innerHTML=x;
+}
+},700)
+
+}
+increase3();
+
+
+</script>
  </html>

@@ -49,8 +49,8 @@ html, body, section{
   font-family: Roboto;
 }
 
-/* section 1 styling */
-.section-1{
+/* first slilde styling */
+.first{
   background: url(./img/final.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -70,43 +70,90 @@ nav a{
   margin: 0.4rem !important;
   color: #67b6e6 !important;
   text-align: center;
+  cursor: pointer;
 }
 
-/* section 2 styling */
-.section-2{
+#registerButton{
+  border-radius: 70px;
+  background-image: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 61%, #2cb5e8 75%);
+  border: 0;
+  color: white;
+  font-family: "Open Sans",X-LocaleSpecific,sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+#registerButton:hover {
+  background-color: green;
+}
+
+/* events slide - section 2 styling */
+
+
+
+/* ideas slide - section 3 styling */
+.ideas{
   background: #000;
   background-size: cover;
 }
-.section-2 .content-heading{color: #fac135;}
-.section-2 .content-text{color: #fff;}
+.ideas .content-heading{color: #fac135;}
+.ideas .content-text{color: #fff;}
 
-/* section 3 styling */
-.section-3{
+/* code-eat-code slide - section 4 styling */
+.eat{
   background: url(./img/fina.png);
   background-size: cover;
 }
-.section-3 .content-heading{color: #e10019;}
+.eat .content-heading{color: #e10019;}
 
-/* section 4 styling */
-.section-4{
+/* music slide - section 5 styling */
+.music{
   background: url(./img/slide-3/lifgt.png) repeat-x;
   background-position: top;
   background-size: 60%;
 }
-.section-4 .content-heading{color: green;}
-.section-4 .content-text{color: #000;}
+.music .content-heading{color: green;}
+.music .content-text{color: #000;}
 
-/* section 5 styling */
-.section-5{
+/* prizes slide - section 6 styling */
+
+
+
+/* sponsors slide - section 7 styling */
+.sponsors{
+  height: 100vh;
+}
+
+
+/* fun slide - section 8 styling */
+.fun{
   background: url(./img/slide-4/flowers.png) no-repeat;
   background-position: bottom;
 }
-.section-5 .content-heading{
+.fun .content-heading{
   color: #fa7c04;
 }
 
-/* section 6 styling */
-.section-6{
+/* faqs slide - section 9 styling */
+#faq{
+  height: 100vh;
+}
+
+.faqs a:hover{
+  text-decoration: none;
+  color: green;
+}
+/* .faqs .card-header:after {
+  content: "\f068";
+  float: right;
+}
+.faqs .card-header.collapsed:after {
+  content: "\f067";
+  float: right;
+} */
+
+
+/* contact slide - section 10 styling */
+.contact{
   background: url(img/contactus/wave.png) repeat-x;
   background-position: top;
   background-size: 30%;
@@ -130,14 +177,14 @@ nav a{
 
 /* media queries */
 @media (max-width: 1200px) {
-  .section-1{background-size: 150%;}
-  .section-4{background-size: 70%;}
-  .section-6{background-size: 40%;}
+  .first{background-size: 150%;}
+  .music{background-size: 70%;}
+  .contact{background-size: 40%;}
 }
 @media (max-width: 992px) {
-  .section-1{background-size: 180%;}
-  .section-4{background-size: 70%;}
-  .section-6{background-size: 50%;}
+  .first{background-size: 180%;}
+  .music{background-size: 70%;}
+  .contact{background-size: 50%;}
 }
 @media (max-width: 768px) {
   nav a{
@@ -145,9 +192,9 @@ nav a{
     border-bottom: .06rem solid #67b6e6 !important;
     margin: 0.6rem;
   }
-  .section-1{background-size: 200%;}
-  .section-4{background-size: 110%;}
-  .section-6{background-size: 60%;}
+  .first{background-size: 200%;}
+  .music{background-size: 110%;}
+  .contact{background-size: 60%;}
 
   .text-content{
     text-align: center;
@@ -168,9 +215,9 @@ nav a{
 }
 @media (max-width: 576px) {
   /* new */
-  .section-1{background-size: 500%;}
-  .section-4{background-size: 150%;}
-  .section-6{background-size: 100%;}
+  .first{background-size: 500%;}
+  .music{background-size: 150%;}
+  .contact{background-size: 100%;}
 
   .text-content{
     text-align: center;

@@ -7,15 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- main css -->
     <link rel="stylesheet" href="style.css">
+    <!-- simplebar css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lora|Raleway|Roboto|Source+Sans+Pro" rel="stylesheet">
-    <title>Zenith 2.0</title>
+    <title>Zenith 2.0 - Hackathon - YMCA University of Science and Technology, Faridabad</title>
   </head>
   <body>
 
-    <!-- section 1 -->
-    <section class="section current section-1" id="section1" data-section="1">
+    <!-- section 1: first slide -->
+    <section class="section current section-1 first" id="section1" data-section="1">
       <nav class="navbar navbar-expand-md navbar-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -23,19 +26,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link active" id="aboutLink" href="#">About</a>
+              <a class="nav-link active" onclick="goToSection('about')">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Events</a>
+              <a class="nav-link" onclick="goToSection('events')">Event</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sponsors</a>
+              <a class="nav-link" onclick="goToSection('sponsors')">Sponsors</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Prizes</a>
+              <a class="nav-link" onclick="goToSection('prizes')">Prizes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="contactusLink" href="#">Contact Us</a>
+              <a class="nav-link" onclick="goToSection('contactus')">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -46,8 +49,9 @@
           <div class="text-capitalize">
             <img src="./img/logo_2.0.png" class="mx-auto d-block img-fluid p-3" id="logo_cover_image" alt="zenith logo">
             <div class="text-center">
-              20-21 April, 2018 | YMCA University, Faridabad<br/>
+              20 - 21 April, 2018 | YMCA University of Science and Technology, Faridabad<br/>
               18 Hour Hackathon<br/>
+              <button type="button" id="registerButton" class="btn m-3 px-4 py-2" name="register">Register Now</button>
             </div>
           </div>
         </div>
@@ -57,8 +61,28 @@
       </div>
     </section>
 
-    <!-- section 2 -->
-    <section class="section section-2" id="about" data-section="2">
+    <!-- section 2: event timeline -->
+    <section class="section section-2 events" id="events" data-section="2">
+      <div class="row no-gutters">
+        <div class="col-md-12">
+          <img src="./img/cal.png" class="img-fluid d-block mx-auto" width="15%" alt="calender icon">
+        </div>
+        <div class="text-content text-center pc-w-75 d-block mx-auto mob-w-100 p-3">
+          <h1 class="content-heading">Event Timeline</h1>
+          <div class="content-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </div>
+        <img src="./img/timeline_x.png" class="d-block mx-auto" width="90%" height="90%" alt="event timeline">
+      </div>
+
+      <span class="scroll-down">
+        <img src="./img/demo/down-arrow-black.png" class="bounce" alt="arrow-down" height="80px" width="80px">
+      </span>
+    </section>
+
+    <!-- section 3: ideas -->
+    <section class="section section-3 ideas" id="about" data-section="3">
       <div class="row no-gutters h-100">
         <div class="col-md-1"></div>
         <div class="col-md-10 h-100">
@@ -70,7 +94,7 @@
               <div class="text-content mr-auto w-70 position-relative t-50 transY-50 p-3 pb-5">
                 <h1 class="content-heading">LET THE IDEAS FLOW!</h1>
                 <div class="content-text">
-                  Are u a coder, technocrat or creative digger looking for challenges! Then welcome to our event which will get ur hacking spirits high, and brings ideas to life. Rather than burning oil lamps, channel focus to create your own disruptive ideas happen .
+                  Are you a coder, technocrat or creative digger looking for challenges! Then welcome to our event which will get ur hacking spirits high, and brings ideas to life. Rather than burning oil lamps, channel focus to create your own disruptive ideas happen .
                   Well just like James Bond says, Sky is the limit !
                 </div>
               </div>
@@ -84,8 +108,8 @@
       </div>
     </section>
 
-    <!-- section 3 -->
-    <section class="section section-3" data-section="3">
+    <!-- section 4: code eat code -->
+    <section class="section section-4 eat" data-section="4">
       <div class="row no-gutters h-100">
         <div class="col-md-12">
           <div class="text-content text-center pc-w-75 d-block mx-auto mob-w-100 position-relative t-75 transY-50 p-3">
@@ -103,8 +127,8 @@
       </div>
     </section>
 
-    <!-- section 4 -->
-    <section class="section section-4" data-section="4">
+    <!-- section 5: music slide -->
+    <section class="section section-5 music" data-section="5">
       <div class="row no-gutters h-100">
         <div class="col-md-12">
           <img src="./img/slide-3/play_pause.png" class="mx-auto d-block img-fluid p-3 position-relative t-20" alt="play pause icons">
@@ -122,8 +146,82 @@
       </div>
     </section>
 
-    <!-- section 5 -->
-    <section class="section section-5" data-section="5">
+    <!-- section 6: prizes -->
+    <section class="section section-6 prizes" id="prizes" data-section="6">
+      <div class="col-md-12">
+        <img src="./img/trophy.png" width="25%" id="mr-piggy" class="img-fluid d-block mx-auto" alt="sponsors">
+      </div>
+
+      <div class="text-content text-center pc-w-75 d-block mx-auto mob-w-100 p-3">
+        <h1 class="content-heading">Rock! Paper! Winners!</h1>
+        <div class="content-text">
+          With awesome cash prizes, Tshirts, amazing goodies and premium vouchers for all, Zenith is a disguise of 'Upar wala' and you're going to get 'Chhapad faad ke'!
+          <br/>
+          Roti ✓,
+          Kapda ✓
+          aur Makaan? Now, you're pushing it.😒
+        </div>
+      </div>
+
+      <span class="scroll-down">
+        <img src="./img/demo/down-arrow-black.png" class="bounce" alt="arrow-down" height="80px" width="80px">
+      </span>
+    </section>
+
+    <!-- section 7: sponsors -->
+    <section class="section section-7 sponsors" id="sponsors" data-section="7" data-simplebar>
+      <img src="./img/sponsors/piggy.png" width="25%" id="mr-piggy" class="img-fluid d-block mx-auto" alt="sponsors">
+
+      <div class="text-content text-center pc-w-75 d-block mx-auto mob-w-100 p-3">
+        <h1 class="content-heading">Sponsors</h1>
+        <div class="content-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </div>
+
+      <div class="container pb-5">
+        <div class="row no-gutters">
+          <div class="col-md-4" align="center">
+            <img src="./img/sponsors/hackerearth.png" class="p-1 m-3" width="70%" alt="hackerearth logo">
+          </div>
+          <div class="col-md-4" align="center">
+            <img src="./img/sponsors/sticker-mule.png" class="p-1 m-3" width="70%" alt="hackerearth logo">
+          </div>
+          <div class="col-md-4" align="center">
+            <img src="./img/sponsors/dottech.png" class="m-3" width="90%" alt="hackerearth logo">
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-md-4" align="center">
+            <img src="./img/sponsors/dottech.png" class="p-1 m-3" width="90%" alt="hackerearth logo">
+          </div>
+          <div class="col-md-4" align="center">
+            <img src="./img/sponsors/hackerearth.png" class="p-1 m-3" width="90%" alt="hackerearth logo">
+          </div>
+          <div class="col-md-4" align="center">
+            <img src="./img/sponsors/hackerearth.png" class="p-1 m-3" width="90%" alt="hackerearth logo">
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-md-4" align="center">
+            <img src="./img/sponsors/hackerearth.png" class="p-1 m-3" width="90%" alt="hackerearth logo">
+          </div>
+          <div class="col-md-4" align="center">
+            <img src="./img/sponsors/hackerearth.png" class="p-1 m-3" width="90%" alt="hackerearth logo">
+          </div>
+          <div class="col-md-4" align="center">
+            <img src="./img/sponsors/hackerearth.png" class="p-1 m-3" width="90%" alt="hackerearth logo">
+          </div>
+        </div>
+      </div>
+
+      <span class="scroll-down">
+        <img src="./img/demo/down-arrow-black.png" class="bounce" alt="arrow-down" height="80px" width="80px">
+      </span>
+    </section>
+
+    <!-- section 8: fun slide -->
+    <section class="section section-8 fun" data-section="8">
       <div class="row no-gutters h-100">
         <div class="col-md-12">
           <img src="./img/slide-4/specs.png" class="mw-100 mx-auto d-block px-2 mh-35" alt="background">
@@ -140,8 +238,120 @@
       </div>
     </section>
 
-    <!-- section 6 -->
-    <section class="section section-6" id="contactus" data-section="6">
+    <!-- section 9: faqs -->
+    <section class="section section-9 faq p-3" id="faq" data-section="9" data-simplebar>
+      <h1 class="text-center display-4 mb-5">FAQs</h1>
+
+      <div class="row no-gutters">
+          <!-- new modified -->
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <div id="faq-list-1" class="faqs px-3" role="tablist">
+              <div class="card">
+                <div class="card-header" role="tab" id="headingOne">
+                  <h5 class="mb-0">
+                    <a data-toggle="collapse" href="#faq-1" aria-expanded="true" aria-controls="faq-1">
+                      How can I register for the challenge?
+                    </a>
+                  </h5>
+                </div>
+                <div id="faq-1" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#faq-list-1">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson.
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" role="tab" id="headingTwo">
+                  <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" href="#faq-2" aria-expanded="false" aria-controls="faq-2">
+                      How can I register for the challenge?
+                    </a>
+                  </h5>
+                </div>
+                <div id="faq-2" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#faq-list-1">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson.
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" role="tab" id="headingThree">
+                  <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" href="#faq-3" aria-expanded="false" aria-controls="faq-3">
+                      How can I register for the challenge?
+                    </a>
+                  </h5>
+                </div>
+                <div id="faq-3" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#faq-list-1">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div id="faq-list-2" class="faqs px-3" role="tablist">
+              <div class="card">
+                <div class="card-header" role="tab" id="headingOne">
+                  <h5 class="mb-0">
+                    <a data-toggle="collapse" href="#faq-4" aria-expanded="true" aria-controls="faq-4">
+                      How can I register for the challenge?
+                    </a>
+                  </h5>
+                </div>
+                <div id="faq-4" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#faq-list-2">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson.
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" role="tab" id="headingTwo">
+                  <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" href="#faq-5" aria-expanded="false" aria-controls="faq-5">
+                      How can I register for the challenge?
+                    </a>
+                  </h5>
+                </div>
+                <div id="faq-5" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#faq-list-2">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson.
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" role="tab" id="headingThree">
+                  <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" href="#faq-6" aria-expanded="false" aria-controls="faq-6">
+                      How can I register for the challenge?
+                    </a>
+                  </h5>
+                </div>
+                <div id="faq-6" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#faq-list-2">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+
+      <span class="scroll-down">
+        <img src="./img/demo/down-arrow-black.png" class="bounce" alt="arrow-down" height="80px" width="80px">
+      </span>
+    </section>
+
+    <!-- section 10: contact -->
+    <section class="section section-10 contact" id="contactus" data-section="10">
       <div class="row no-gutters h-100">
         <div class="w-100 position-absolute t-30 transY-50 l-50 transX-50" align="center">
           <a href="https://www.instagram.com/manantechnosurge/" target="_blank"><img class="social-icon" src="img/vectors/insta.png" alt="instagram"></a>
@@ -165,22 +375,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- for scrolling using keypress -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+    <!-- simplebar -->
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js"></script>
 
     <!-- scroll to slide on clicking navbar links -->
     <script>
-      $("#aboutLink").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#about").offset().top
-          }, 400);
-      });
-    </script>
-
-    <script>
-      $("#contactusLink").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#contactus").offset().top
-          }, 800);
-      });
+      function goToSection(id) {
+        $(document).ready(function() {
+          $('html, body').animate({
+              scrollTop: $("#"+id).offset().top
+            }, 800);
+        });
+      }
     </script>
 
     <!-- close navbar after link is clicked -->
@@ -223,7 +429,7 @@
           console.log("e.which = " + e.which);
 
           // variable declaration and initialization
-          var current, prev, next, numOfSections = 6;
+          var current, prev, next, numOfSections = 10;
           current = $('section.current').data('section');
           prev = (current>1)?(current-1):1;
           next = (current<numOfSections)?(current+1):numOfSections;

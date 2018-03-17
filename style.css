@@ -120,7 +120,7 @@ nav a{
 
 /* sponsors slide - section 7 styling */
 .sponsors{
-  height: 100vh;
+  height: auto !important;
 }
 
 
@@ -135,12 +135,15 @@ nav a{
 
 /* faqs slide - section 9 styling */
 #faq{
-  height: 100vh;
+  height: auto !important;
 }
-
+.faqs a{
+  color: #666;
+  font-size: 1.1rem;
+}
 .faqs a:hover{
   text-decoration: none;
-  color: green;
+  color: #000;
 }
 /* .faqs .card-header:after {
   content: "\f068";
@@ -232,6 +235,13 @@ nav a{
   .social-icon{
     height: 80px;
     width: 80px;
+  }
+  .scroll-down img{
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .scroll-down{
+    left: 50%;
   }
 }
 

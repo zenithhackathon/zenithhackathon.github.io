@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lora|Raleway|Roboto|Source+Sans+Pro" rel="stylesheet">
-    <title>Zenith 2.0 - Hackathon - YMCA University of Science and Technology, Faridabad</title>
+    <title>Zenith 2.0</title>
   </head>
   <body>
 
@@ -24,9 +24,9 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav mx-auto topBotomBordersIn">
             <li class="nav-item">
-              <a class="nav-link active" onclick="goToSection('about')">About</a>
+              <a class="nav-link" onclick="goToSection('about')">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" onclick="goToSection('events')">Event</a>
@@ -49,9 +49,9 @@
           <div class="text-capitalize">
             <img src="./img/logo_2.0.png" class="mx-auto d-block img-fluid p-3" id="logo_cover_image" alt="zenith logo">
             <div class="text-center">
-              20 - 21 April, 2018 | YMCA University of Science and Technology, Faridabad<br/>
+              20th April, 2018 | YMCA University, Faridabad<br/>
               18 Hour Hackathon<br/>
-              <button type="button" id="registerButton" class="btn m-3 px-4 py-2" name="register">Register Now</button>
+              <button type="button" id="registerButton" class="btn m-3 px-4 py-2 hover-me" name="register">Register Now</button>
             </div>
           </div>
         </div>
@@ -65,15 +65,16 @@
     <section class="section section-2 events" id="events" data-section="2">
       <div class="row no-gutters">
         <div class="col-md-12">
-          <img src="./img/cal.png" class="img-fluid d-block mx-auto" width="15%" alt="calender icon">
+          <img src="./img/cal.png" id="cal-img" class="img-fluid d-block mx-auto p-3" width="15%" alt="calender icon">
         </div>
         <div class="text-content text-center pc-w-75 d-block mx-auto mob-w-100 p-3">
-          <h1 class="content-heading">Event Timeline</h1>
+          <!-- <h1 class="content-heading">Event Timeline</h1> -->
           <div class="content-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Work together, try new things and learn while doing. That's what makes a better programmer.<br/>
+            The overnight Zenith 2.0 will go on as follows..
           </div>
         </div>
-        <img src="./img/timeline_x.png" class="d-block mx-auto" width="90%" height="90%" alt="event timeline">
+        <img src="./img/timeline-x.png" class="d-block mx-auto" width="90%" height="90%" alt="event timeline">
       </div>
 
       <span class="scroll-down">
@@ -149,7 +150,7 @@
     <!-- section 6: prizes -->
     <section class="section section-6 prizes" id="prizes" data-section="6">
       <div class="col-md-12">
-        <img src="./img/trophy.png" width="25%" id="mr-piggy" class="img-fluid d-block mx-auto" alt="sponsors">
+        <img src="./img/trophy.png" width="25%" id="trophy" class="img-fluid d-block mx-auto" alt="prizes">
       </div>
 
       <div class="text-content text-center pc-w-75 d-block mx-auto mob-w-100 p-3">
@@ -157,8 +158,8 @@
         <div class="content-text">
           With awesome cash prizes, Tshirts, amazing goodies and premium vouchers for all, Zenith is a disguise of 'Upar wala' and you're going to get 'Chhapad faad ke'!
           <br/>
-          Roti ✓,
-          Kapda ✓
+          Roti ✓,<br/>
+          Kapda ✓<br/>
           aur Makaan? Now, you're pushing it.😒
         </div>
       </div>
@@ -169,48 +170,45 @@
     </section>
 
     <!-- section 7: sponsors -->
-    <section class="section section-7 sponsors" id="sponsors" data-section="7" data-simplebar>
-      <img src="./img/sponsors/piggy.png" width="25%" id="mr-piggy" class="img-fluid d-block mx-auto" alt="sponsors">
+    <section class="section section-7 spnsrs pb-5" id="sponsors" data-section="7">
+      <img src="./img/sponsors/piggy.png" id="mr-piggy" class="img-fluid d-block mx-auto" alt="sponsors">
 
       <div class="text-content text-center pc-w-75 d-block mx-auto mob-w-100 p-3">
-        <h1 class="content-heading">Sponsors</h1>
-        <div class="content-text">
+        <h1 class="display-4">Sponsors</h1>
+        <!-- <div class="content-text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </div>
+        </div> -->
       </div>
 
       <div class="container pb-5">
         <div class="row no-gutters">
           <div class="col-md-4" align="center">
-            <img src="./img/sponsors/hackerearth.png" class="p-1 m-3" width="70%" alt="hackerearth logo">
+            <img src="./img/sponsors/hackerearth.png" class="p-1 m-3 hover-me spnsr-logo" width="80%" alt="hackerearth logo">
           </div>
           <div class="col-md-4" align="center">
-            <img src="./img/sponsors/sticker-mule.png" class="p-1 m-3" width="70%" alt="hackerearth logo">
+            <img src="./img/sponsors/sticker-mule.png" class="p-1 m-3 hover-me spnsr-logo" width="90%" alt="sticker mule logo">
           </div>
           <div class="col-md-4" align="center">
-            <img src="./img/sponsors/dottech.png" class="m-3" width="90%" alt="hackerearth logo">
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-md-4" align="center">
-            <img src="./img/sponsors/dottech.png" class="p-1 m-3" width="90%" alt="hackerearth logo">
-          </div>
-          <div class="col-md-4" align="center">
-            <img src="./img/sponsors/hackerearth.png" class="p-1 m-3" width="90%" alt="hackerearth logo">
-          </div>
-          <div class="col-md-4" align="center">
-            <img src="./img/sponsors/hackerearth.png" class="p-1 m-3" width="90%" alt="hackerearth logo">
+            <img src="./img/sponsors/dottech.png" class="p-1 m-3 hover-me spnsr-logo" width="90%" alt="dottech logo">
           </div>
         </div>
         <div class="row no-gutters">
           <div class="col-md-4" align="center">
-            <img src="./img/sponsors/hackerearth.png" class="p-1 m-3" width="90%" alt="hackerearth logo">
+            <img src="./img/sponsors/temboo-logo.png" class="p-1 m-3 hover-me spnsr-logo" width="80%" alt="temboo logo">
           </div>
           <div class="col-md-4" align="center">
-            <img src="./img/sponsors/hackerearth.png" class="p-1 m-3" width="90%" alt="hackerearth logo">
+            <img src="./img/sponsors/john-snow-labs-logo.png" class="p-1 m-3 hover-me spnsr-logo" width="90%" alt="john snow labs logo">
           </div>
           <div class="col-md-4" align="center">
-            <img src="./img/sponsors/hackerearth.png" class="p-1 m-3" width="90%" alt="hackerearth logo">
+            <img src="./img/sponsors/cblogo.png" class="p-1 m-3 hover-me spnsr-logo" width="90%" alt="coding blocks logo">
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-md-4" align="center">
+            <img src="./img/sponsors/sketch-logo-light.png" class="p-1 m-3 hover-me spnsr-logo" width="90%" alt="hackerearth logo">
+          </div>
+          <div class="col-md-4" align="center">
+            <img src="./img/sponsors/jetbrains-logo.png" class="p-1 m-3 hover-me spnsr-logo" width="50%" alt="jetbrains logo">
           </div>
         </div>
       </div>
@@ -239,30 +237,10 @@
     </section>
 
     <!-- section 9: faqs -->
-    <section class="section section-9 faq p-3" id="faq" data-section="9" data-simplebar>
-      <h1 class="text-center display-4 mb-5">FAQs</h1>
+    <section class="section section-9 faq p-3 pb-5" id="faq" data-section="9">
+      <h1 class="text-center display-4 p-3">FAQs</h1>
 
-      <div class="row no-gutters h-100">
-        <div class="col-md-12">
-          <img src="./img/slide-4/specs.png" class="mw-100 mx-auto d-block px-2 mh-35" alt="background">
-          <div class="text-content text-center pc-w-75 mob-w-100 p-3 mx-auto position-absolute t-40 mob-t-25 transY-50 l-50 transX-50">
-            <h1 class="content-heading">Get yourself packed with Fun</h1>
-            <div class="content-text">
-              Zenith never sleeps, we will provide you fun activities to take a break from your hard hacking. Here sleeping is optional but trying to make awesome things is not.Bring the creativity out from within yourselves. Just come here with your smart workstations,but don't forgot to bring a backpack full of creative ideas rest all we will take care!
-            </div>
-          </div>
-        </div>
-        <span class="scroll-down">
-          <img src="./img/demo/down-arrow-black.png" class="bounce" alt="arrow-down" height="80px" width="80px">
-        </span>
-      </div>
-    </section>
-
-    <!-- section 9: faqs -->
-    <section class="section section-9 faq p-3" id="faq" data-section="9">
-      <h1 class="text-center display-4 mb-5">FAQs</h1>
-
-      <div class="row no-gutters">
+      <div class="row no-gutters pb-5">
           <div class="col-md-2"></div>
           <div class="col-md-4">
             <div id="faq-list-1" class="faqs px-3" role="tablist">
@@ -333,12 +311,12 @@
               <div class="card">
                 <div class="card-header" role="tab" id="headingOne">
                   <h5 class="mb-0">
-                    <a data-toggle="collapse" href="#faq-4" aria-expanded="true" aria-controls="faq-4">
+                    <a class="collapsed" data-toggle="collapse" href="#faq-5" aria-expanded="true" aria-controls="faq-5">
                       Can I start working on my hack before the event?
                     </a>
                   </h5>
                 </div>
-                <div id="faq-4" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#faq-list-2">
+                <div id="faq-5" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#faq-list-2">
                   <div class="card-body">
                     No, but you can familiarize yourself with all the tools and technologies you intend to use beforehand!
                   </div>
@@ -348,12 +326,12 @@
               <div class="card">
                 <div class="card-header" role="tab" id="headingTwo">
                   <h5 class="mb-0">
-                    <a class="collapsed" data-toggle="collapse" href="#faq-5" aria-expanded="false" aria-controls="faq-5">
+                    <a class="collapsed" data-toggle="collapse" href="#faq-6" aria-expanded="false" aria-controls="faq-6">
                       Will my travelling expenses be reimbursed?
                     </a>
                   </h5>
                 </div>
-                <div id="faq-5" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#faq-list-2">
+                <div id="faq-6" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#faq-list-2">
                   <div class="card-body">
                     Sorry, but we will NOT be able to provide it.
                   </div>
@@ -363,12 +341,12 @@
               <div class="card">
                 <div class="card-header" role="tab" id="headingThree">
                   <h5 class="mb-0">
-                    <a class="collapsed" data-toggle="collapse" href="#faq-6" aria-expanded="false" aria-controls="faq-6">
+                    <a class="collapsed" data-toggle="collapse" href="#faq-7" aria-expanded="false" aria-controls="faq-7">
                       Who will own the IP(Intellectual Property) Rights to the product that I have built?
                     </a>
                   </h5>
                 </div>
-                <div id="faq-6" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#faq-list-2">
+                <div id="faq-7" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#faq-list-2">
                   <div class="card-body">
                     The developer/developers of the web/mobile application will have all rights and own the IP of the product. However, we promote open source. :D
                   </div>
@@ -387,17 +365,36 @@
     <!-- section 10: contact -->
     <section class="section section-10 contact" id="contactus" data-section="10">
       <div class="row no-gutters h-100">
-        <div class="w-100 position-absolute t-30 transY-50 l-50 transX-50" align="center">
-          <a href="https://www.instagram.com/manantechnosurge/" target="_blank"><img class="social-icon" src="img/vectors/insta.png" alt="instagram"></a>
-          <a href="https://www.facebook.com/Manan.Ymcaust/" target="_blank"><img class="social-icon" src="img/vectors/fb.png" alt="facebook"></a>
-          <a href="https://twitter.com/manantechsurge" target="_blank"><img class="social-icon" src="img/vectors/twitter.png" alt="twitter"></a>
-          <a href="mailto:manantechnosurge@gmail.com"><img class="social-icon" src="img/vectors/mail.png" alt="mail"></a>
+        <div class="w-100 position-absolute t-25 transY-50 l-50 transX-50" align="center">
+          <a href="https://www.instagram.com/manantechnosurge/" target="_blank"><img class="social-icon hover-me" src="img/vectors/insta.png" alt="instagram"></a>
+          <a href="https://www.facebook.com/Manan.Ymcaust/" target="_blank"><img class="social-icon hover-me" src="img/vectors/fb.png" alt="facebook"></a>
+          <a href="https://twitter.com/manantechsurge" target="_blank"><img class="social-icon hover-me" src="img/vectors/twitter.png" alt="twitter"></a>
+          <a href="mailto:manantechnosurge@gmail.com"><img class="social-icon hover-me" src="img/vectors/mail.png" alt="mail"></a>
         </div>
-        <div class="text-content text-center position-absolute l-50 transX-50 pc-w-75 mob-w-100 px-3 pb-5 t-60 transY-50">
+
+        <div class="w-100 position-absolute t-40 transY-50 l-50 transX-50" align="center">
+          <a href="http://manantechnosurge.com" target="_blank"><img class="manan-logo px-2 hover-me" width="200px" src="img/manan-logo.png" alt="manan logo"></a>
+          <a href="http://www.ymcaust.ac.in" target="_blank"><img class="ymca-logo px-2 hover-me" src="img/ymca-Logo.png" width="130px" alt="ymca ust logo"></a>
+        </div>
+
+        <div class="text-content text-center position-absolute l-50 transX-50 pc-w-75 mob-w-100 px-3 py-2 t-60 transY-50">
           <h1 class="content-heading">YMCA University Of Science & Technology</h1>
           <div class="content-text">
             NH-2, Sector 6, Mathura Road, Near Escorts Mujesar Metro Station, Faridabad, Haryana 121006
           </div>
+        </div>
+        <hr/>
+
+        <!-- <div id="contact-numbers" class="row no-gutters text-center position-absolute t-85 w-100" align='center'>
+          <div class="col-md-4 text-center">Naman Sachdeva: 8222831183</div>
+          <div class="col-md-4 text-center">Gaurav Yadav: 8860449388</div>
+          <div class="col-md-4 text-center">Hemant Bansal: 8930572630</div>
+        </div> -->
+
+        <div id="contact-numbers" class="text-center position-absolute t-85 w-100">
+          <div class="text-center">Naman Sachdeva: 8222831183</div>
+          <div class="text-center">Gaurav Yadav: 8860449388</div>
+          <div class="text-center">Hemant Bansal: 8930572630</div>
         </div>
       </div>
     </section>

@@ -16,9 +16,11 @@ html, body, section{
 .t-25{top: 25%;}
 .t-30{top: 30%;}
 .t-40{top: 40%;}
+.t-45{top: 45%;}
 .t-50{top: 50%;}
 .t-60{top: 60%;}
 .t-75{top: 75%;}
+.t-85{top: 85%;}
 
 .l-50{left: 50%;}
 
@@ -66,11 +68,36 @@ html, body, section{
 }
 nav a{
   font-size: 1.3rem;
-  border-bottom: .11rem solid #67b6e6;
   margin: 0.4rem !important;
   color: #67b6e6 !important;
   text-align: center;
   cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Top and Bottom borders come in */
+ul.topBotomBordersIn li a:before, ul.topBotomBordersIn li a:after {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: #67b6e6;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s;
+}
+ul.topBotomBordersIn li a:before {
+  top: 0px;
+  transform: translateY(-10px);
+}
+ul.topBotomBordersIn li a:after {
+  bottom: 0px;
+  transform: translateY(10px);
+}
+ul.topBotomBordersIn li a:hover:before, ul.topBotomBordersIn li a:hover:after {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 #registerButton{
@@ -81,6 +108,9 @@ nav a{
   font-family: "Open Sans",X-LocaleSpecific,sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
 }
 #registerButton:hover {
   background-color: green;
@@ -119,10 +149,17 @@ nav a{
 
 
 /* sponsors slide - section 7 styling */
-.sponsors{
+.spnsrs{
   height: auto !important;
 }
-
+#mr-piggy{
+  width: 25%;
+}
+.spnsr-logo{
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+}
 
 /* fun slide - section 8 styling */
 .fun{
@@ -145,15 +182,6 @@ nav a{
   text-decoration: none;
   color: #000;
 }
-/* .faqs .card-header:after {
-  content: "\f068";
-  float: right;
-}
-.faqs .card-header.collapsed:after {
-  content: "\f067";
-  float: right;
-} */
-
 
 /* contact slide - section 10 styling */
 .contact{
@@ -162,9 +190,19 @@ nav a{
   background-size: 30%;
 }
 .social-icon{
-  height: 150px;
-  width: 150px;
+  height: 120px;
+  width: 120px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
 }
+.manan-logo, .ymca-logo{
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+}
+#contactus .content-text{font-size: 1rem !important;}
+#contact-numbers{font-family: 'Raleway', sans-serif;}
 
 /* scroll icon styling */
 .scroll-down{
@@ -175,6 +213,15 @@ nav a{
   -webkit-transform: translateX(-50%);
   bottom: 0;
   opacity: 0.4;
+}
+
+.hover-me:hover{
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
 }
 
 
@@ -226,6 +273,9 @@ nav a{
     text-align: center;
     width: 100% !important;
   }
+  .content-text{
+    font-size: 1.1rem;
+  }
   .mob-mw-100{
     max-width: 100%;
   }
@@ -237,11 +287,14 @@ nav a{
     width: 80px;
   }
   .scroll-down img{
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 3rem;
+    width: 3rem;
   }
   .scroll-down{
     left: 50%;
+  }
+  #mr-piggy, #trophy, #cal-img{
+    width: 60%;
   }
 }
 

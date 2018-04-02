@@ -117,8 +117,7 @@ ul.topBotomBordersIn li a:hover:before, ul.topBotomBordersIn li a:hover:after {
 }
 
 /* events slide - section 2 styling */
-
-
+/* .events{background-color: #ECEFF1;} */
 
 /* ideas slide - section 3 styling */
 .ideas{
@@ -132,6 +131,7 @@ ul.topBotomBordersIn li a:hover:before, ul.topBotomBordersIn li a:hover:after {
 .eat{
   background: url(./img/fina.png);
   background-size: cover;
+  background-color: #ECEFF1;
 }
 .eat .content-heading{color: #e10019;}
 
@@ -145,7 +145,7 @@ ul.topBotomBordersIn li a:hover:before, ul.topBotomBordersIn li a:hover:after {
 .music .content-text{color: #000;}
 
 /* prizes slide - section 6 styling */
-
+.prizes{background-color: #ECEFF1;}
 
 
 /* sponsors slide - section 7 styling */
@@ -163,8 +163,9 @@ ul.topBotomBordersIn li a:hover:before, ul.topBotomBordersIn li a:hover:after {
 
 /* fun slide - section 8 styling */
 .fun{
-  background: url(./img/slide-4/flowers.png) no-repeat;
+  /* background: url(./img/slide-4/flowers.png) no-repeat; */
   background-position: bottom;
+  background-color: #ECEFF1;
 }
 .fun .content-heading{
   color: #fa7c04;
@@ -182,12 +183,14 @@ ul.topBotomBordersIn li a:hover:before, ul.topBotomBordersIn li a:hover:after {
   text-decoration: none;
   color: #000;
 }
+.faq .card-body{color: #555;}
 
 /* contact slide - section 10 styling */
 .contact{
   background: url(img/contactus/wave.png) repeat-x;
   background-position: top;
   background-size: 30%;
+  background-color: #ECEFF1;
 }
 .social-icon{
   height: 120px;
@@ -203,6 +206,7 @@ ul.topBotomBordersIn li a:hover:before, ul.topBotomBordersIn li a:hover:after {
 }
 #contactus .content-text{font-size: 1rem !important;}
 #contact-numbers{font-family: 'Raleway', sans-serif;}
+.contact .ymca{font-family: 'Raleway', sans-serif;}
 
 /* scroll icon styling */
 .scroll-down{
@@ -224,6 +228,18 @@ ul.topBotomBordersIn li a:hover:before, ul.topBotomBordersIn li a:hover:after {
   -moz-transition: all 0.3s;
 }
 
+/* footer */
+footer{
+  color: #ccc;
+  background: #37474F;
+  height: auto;
+  padding: 40px 10px;
+}
+footer a{color: #67b6e6;}
+footer a:hover{
+  color: #00E676;
+  text-decoration: none;
+}
 
 /* media queries */
 @media (max-width: 1200px) {
